@@ -73,3 +73,90 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* stylelint-disable no-descending-specificity -- footer bar styles are a separate section scoped to sibling combinator */
+
+/* ---------- footer bar (flags, links, copyright) ---------- */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper {
+  background-color: var(--dark-color);
+  border-radius: 16px;
+  padding: var(--spacing-l);
+  margin-top: var(--spacing-l);
+  color: #fff;
+}
+
+/* country-selector trigger image */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:first-child {
+  margin: 0 0 var(--spacing-m);
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:first-child img {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border: 1px solid rgb(255 255 255 / 30%);
+}
+
+/* flag list – horizontal row */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > ul {
+  list-style: none;
+  margin: 0 0 var(--spacing-l);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s) var(--spacing-m);
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > ul > li img {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > ul > li a {
+  color: rgb(255 255 255 / 85%);
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > ul > li a:hover {
+  color: #fff;
+}
+
+/* footer links – first link paragraph (US) */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:nth-child(3) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: var(--spacing-s);
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  padding-top: var(--spacing-m);
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:nth-child(3) a {
+  color: rgb(255 255 255 / 75%);
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:nth-child(3) a:hover {
+  color: #fff;
+}
+
+/* copyright (first one) */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:nth-child(4) {
+  color: rgb(255 255 255 / 60%);
+  font-size: var(--body-font-size-xs);
+  margin-bottom: 0;
+}
+
+/* hide duplicate regional link paragraphs, extra copyrights, and chat elements */
+.cards-support-container .cards-support-wrapper ~ .default-content-wrapper > p:nth-child(n+5) {
+  display: none;
+}
