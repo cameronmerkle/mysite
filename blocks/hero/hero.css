@@ -1,3 +1,8 @@
+/* hero block */
+.hero-container {
+  padding: 0;
+}
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,33 +10,70 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+  overflow: hidden;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+/* row 1 – background image */
+.hero > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.hero img {
+.hero picture img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
+/* row 2 – text overlay */
+.hero > div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  background: var(--background-color);
+  padding: var(--spacing-xl) var(--spacing-l);
+}
+
+.hero h1 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--heading-color);
+  margin-bottom: var(--spacing-s);
+}
+
+.hero > div:nth-child(2) p {
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0;
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 700px;
+  }
+
+  .hero > div:nth-child(2) {
+    max-width: 55%;
+    margin-left: auto;
+    border-radius: 40px 0 0;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+  }
+
+  .hero h1 {
+    font-size: var(--heading-font-size-xxxl, 3.5rem);
   }
 }
