@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity -- tab buttons and panel elements target separate contexts */
+
 /* tabs-numbered – numbered tab navigation (01, 02, 03) */
 .tabs-numbered {
   display: flex;
@@ -9,15 +11,13 @@
   line-height: 1.5;
 }
 
-/* tabs below image – matches original Lumen layout */
+/* tab list – horizontal row at top */
 .tabs-numbered .tabs-numbered-list {
   display: flex;
-  gap: var(--spacing-m);
-  margin-top: var(--spacing-l);
-  margin-bottom: 0;
+  gap: var(--spacing-l);
+  margin: 0 0 var(--spacing-l);
   border: none;
   overflow-x: auto;
-  order: 2;
 }
 
 .tabs-numbered .tabs-numbered-list button {
@@ -35,6 +35,7 @@
   cursor: pointer;
   transition: color var(--transition-base);
   white-space: nowrap;
+  border-bottom: 3px solid transparent;
 }
 
 .tabs-numbered .tabs-numbered-list button p {
@@ -47,21 +48,21 @@
 
 .tabs-numbered .tabs-numbered-list button[aria-selected='true'] {
   color: var(--heading-color);
+  border-bottom-color: #f95e4a;
 }
 
-/* tab panels – above tabs */
+/* tab panels */
 .tabs-numbered .tabs-numbered-panel {
   padding: 0;
   border: none;
   margin: 0;
-  order: 1;
 }
 
 .tabs-numbered .tabs-numbered-panel[aria-hidden='true'] {
   display: none;
 }
 
-/* panel content layout */
+/* panel content – stacked on mobile */
 .tabs-numbered .tabs-numbered-panel > div {
   display: flex;
   flex-direction: column;
@@ -77,9 +78,15 @@
 
 .tabs-numbered .tabs-numbered-panel h2 {
   font-size: var(--heading-font-size-xl);
-  line-height: 1.25;
+  line-height: 1.15;
   margin-top: var(--spacing-s);
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-s);
+}
+
+/* description text */
+.tabs-numbered .tabs-numbered-panel > div > p:nth-child(3) {
+  color: var(--text-color);
+  max-width: 560px;
 }
 
 /* orange gradient CTA button */
@@ -106,5 +113,49 @@
 @media (width >= 900px) {
   .tabs-numbered .tabs-numbered-list button {
     font-size: 48px;
+  }
+
+  /* two-column layout: text left, image right */
+  .tabs-numbered .tabs-numbered-panel > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0 var(--spacing-xl);
+    align-items: start;
+  }
+
+  /* image – right column, spanning all rows */
+  .tabs-numbered .tabs-numbered-panel > div > p:first-child {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    margin: 0;
+  }
+
+  .tabs-numbered .tabs-numbered-panel img {
+    border-radius: 32px;
+    aspect-ratio: auto;
+    max-height: 480px;
+  }
+
+  /* heading – left column */
+  .tabs-numbered .tabs-numbered-panel > div > h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: var(--heading-font-size-xxl);
+    margin-bottom: var(--spacing-m);
+  }
+
+  /* description – left column */
+  .tabs-numbered .tabs-numbered-panel > div > p:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* CTA – left column */
+  .tabs-numbered .tabs-numbered-panel > div > p:last-child {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: var(--spacing-s);
   }
 }
