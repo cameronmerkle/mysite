@@ -1,0 +1,68 @@
+/* cards-solutions – service category cards (used in dark sections) */
+.cards-solutions > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.cards-solutions > ul > li {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cards-solutions > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+}
+
+.cards-solutions .cards-solutions-card-image {
+  line-height: 0;
+}
+
+.cards-solutions .cards-solutions-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.cards-solutions .cards-solutions-card-body {
+  padding: var(--spacing-m);
+}
+
+.cards-solutions .cards-solutions-card-body h2 {
+  font-size: var(--heading-font-size-s);
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+  color: var(--heading-color);
+}
+
+.cards-solutions .cards-solutions-card-body p {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.cards-solutions .cards-solutions-card-body p:last-child a {
+  font-weight: 600;
+  color: var(--link-color);
+}
+
+.cards-solutions .cards-solutions-card-body p:last-child a:hover {
+  color: var(--accent-color);
+}
+
+@media (width >= 600px) {
+  .cards-solutions > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-solutions > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

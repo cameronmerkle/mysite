@@ -1,0 +1,100 @@
+/* cards-industry – industry cards with intro header (used in dark sections) */
+.cards-industry > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+/* shared card-image and card-body base styles */
+.cards-industry .cards-industry-card-image {
+  line-height: 0;
+}
+
+.cards-industry .cards-industry-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.cards-industry .cards-industry-card-body {
+  padding: var(--spacing-m);
+}
+
+.cards-industry .cards-industry-card-body p:last-child a {
+  font-weight: 600;
+  color: var(--link-color);
+}
+
+.cards-industry .cards-industry-card-body p:last-child a:hover {
+  color: var(--accent-color);
+}
+
+/* first card is intro/header (no image) */
+.cards-industry > ul > li:first-child {
+  border-radius: 0;
+  background: none;
+  border: none;
+}
+
+.cards-industry > ul > li:first-child .cards-industry-card-body {
+  padding: 0;
+}
+
+.cards-industry > ul > li:first-child .cards-industry-card-body h2 {
+  font-size: var(--heading-font-size-xl);
+  color: #fff;
+  margin-top: 0;
+}
+
+.cards-industry > ul > li:first-child .cards-industry-card-body p {
+  color: rgb(255 255 255 / 85%);
+}
+
+/* hide empty image column on intro card */
+.cards-industry > ul > li:first-child .cards-industry-card-image {
+  display: none;
+}
+
+/* regular industry cards */
+.cards-industry > ul > li:not(:first-child) {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cards-industry > ul > li:not(:first-child):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+}
+
+.cards-industry > ul > li:not(:first-child) .cards-industry-card-body h2 {
+  font-size: var(--heading-font-size-s);
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+  color: var(--heading-color);
+}
+
+.cards-industry > ul > li:not(:first-child) .cards-industry-card-body p {
+  color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .cards-industry > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-industry > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards-industry > ul > li:first-child {
+    display: flex;
+    align-items: center;
+  }
+}

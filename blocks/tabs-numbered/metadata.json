@@ -1,0 +1,31 @@
+{
+  "variantName": "tabs-numbered",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-03-25T19:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.lumen.com/en-us/home.html",
+    "originPage": "Lumen enterprise homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature-tabs",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab-number + image + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["feature showcases", "numbered step content", "product capability panels"],
+    "notSuitableFor": ["FAQ sections", "simple text tabs", "data tables"]
+  },
+  "usage": {
+    "pagesUsing": ["/en-us/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-25T19:47:00.000Z"
+  }
+}

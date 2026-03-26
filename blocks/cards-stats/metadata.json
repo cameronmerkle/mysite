@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-stats",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-25T19:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.lumen.com/en-us/home.html",
+    "originPage": "Lumen enterprise homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "stats-showcase",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "pretitle-number + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["statistics sections", "key metrics displays", "customer results highlights"],
+    "notSuitableFor": ["product grids", "team member cards", "blog article cards"]
+  },
+  "usage": {
+    "pagesUsing": ["/en-us/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-25T19:47:00.000Z"
+  }
+}

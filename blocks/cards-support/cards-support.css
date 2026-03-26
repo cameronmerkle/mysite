@@ -1,0 +1,59 @@
+/* cards-support – support/resource cards with icons */
+.cards-support > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.cards-support > ul > li {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--light-color);
+  padding: var(--spacing-m);
+  transition: box-shadow var(--transition-base);
+}
+
+.cards-support > ul > li:hover {
+  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+}
+
+.cards-support .cards-support-card-image {
+  line-height: 0;
+  margin-bottom: var(--spacing-s);
+}
+
+.cards-support .cards-support-card-image img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.cards-support .cards-support-card-body h2 {
+  font-size: var(--heading-font-size-s);
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.cards-support .cards-support-card-body p:last-child a {
+  font-weight: 600;
+  color: var(--link-color);
+}
+
+.cards-support .cards-support-card-body p:last-child a:hover {
+  color: var(--accent-color);
+}
+
+@media (width >= 600px) {
+  .cards-support > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-support > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

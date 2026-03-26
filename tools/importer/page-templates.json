@@ -1,0 +1,151 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.lumen.com/en-us/home.html"
+      ],
+      "description": "Lumen Technologies homepage with hero, product/service offerings, and company information",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".herobanner.teaser",
+          "style": null,
+          "blocks": [
+            "hero-enterprise"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Stats",
+          "selector": ".teasercontainer.teaser:has(.teaser-stat-tiles)",
+          "style": null,
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": [
+            ".teaser-stat-tiles > .cmp-teaser__content"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Tabbed Features",
+          "selector": ".stackedContent",
+          "style": null,
+          "blocks": [
+            "tabs-numbered"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Industry Selector",
+          "selector": ".industrySelectorBlock",
+          "style": null,
+          "blocks": [
+            "tabs-industry"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Solutions Cards",
+          "selector": ".teasercontainer.teaser:has(.teaser-cards-block)",
+          "style": "dark",
+          "blocks": [
+            "cards-solutions"
+          ],
+          "defaultContent": [
+            ".teaser-cards-block > .cmp-teaser__content"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Logo Bar",
+          "selector": ".partnerstory",
+          "style": null,
+          "blocks": [
+            "cards-logos"
+          ],
+          "defaultContent": [
+            ".partner-story-heading"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Staggered Industry Cards",
+          "selector": ".teasercontainer.teaser:has(.teaser-staggered-cards)",
+          "style": "dark",
+          "blocks": [
+            "cards-industry"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Support",
+          "selector": ".teasercontainer.teaser:has(.teaser-with-cards)",
+          "style": null,
+          "blocks": [
+            "cards-support"
+          ],
+          "defaultContent": [
+            ".teaser-with-cards > .cmp-teaser__content"
+          ]
+        }
+      ],
+      "blocks": [
+        {
+          "name": "hero-enterprise",
+          "instances": [
+            ".herobanner.teaser"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            ".teaser-stat-tiles .cards.wrapper"
+          ]
+        },
+        {
+          "name": "tabs-numbered",
+          "instances": [
+            ".stackedContent .lumen-tabs"
+          ]
+        },
+        {
+          "name": "tabs-industry",
+          "instances": [
+            ".industrySelectorBlock .industry-selector-container"
+          ]
+        },
+        {
+          "name": "cards-solutions",
+          "instances": [
+            ".teaser-cards-block .cards.wrapper"
+          ]
+        },
+        {
+          "name": "cards-logos",
+          "instances": [
+            ".partnerstory .carousel-group:first-child"
+          ]
+        },
+        {
+          "name": "cards-industry",
+          "instances": [
+            ".teaser-staggered-cards .cards.wrapper"
+          ]
+        },
+        {
+          "name": "cards-support",
+          "instances": [
+            ".teaser-with-cards .cards.wrapper"
+          ]
+        }
+      ]
+    }
+  ]
+}

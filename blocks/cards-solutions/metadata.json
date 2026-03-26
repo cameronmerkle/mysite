@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-solutions",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-25T19:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.lumen.com/en-us/home.html",
+    "originPage": "Lumen enterprise homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "wide",
+    "purpose": "solution-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["service category cards", "solution overview grids", "product category displays"],
+    "notSuitableFor": ["stats sections", "logo grids", "text-only cards"]
+  },
+  "usage": {
+    "pagesUsing": ["/en-us/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-25T19:47:00.000Z"
+  }
+}

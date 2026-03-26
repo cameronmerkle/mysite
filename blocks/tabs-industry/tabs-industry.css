@@ -1,0 +1,96 @@
+/* tabs-industry – industry selector tabs */
+.tabs-industry .tabs-industry-list {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: var(--spacing-l);
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs-industry .tabs-industry-list button {
+  flex: 0 0 auto;
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: var(--spacing-s) var(--spacing-m);
+  background: none;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: color var(--transition-base), border-color var(--transition-base);
+  white-space: nowrap;
+  text-overflow: unset;
+  overflow: unset;
+}
+
+.tabs-industry .tabs-industry-list button p {
+  margin: 0;
+}
+
+.tabs-industry .tabs-industry-list button:hover {
+  color: var(--accent-color);
+}
+
+.tabs-industry .tabs-industry-list button[aria-selected='true'] {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* tab panels */
+.tabs-industry .tabs-industry-panel {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.tabs-industry .tabs-industry-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* panel content */
+.tabs-industry .tabs-industry-panel > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.tabs-industry .tabs-industry-panel img {
+  width: 100%;
+  border-radius: 16px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.tabs-industry .tabs-industry-panel p:first-child {
+  margin-top: 0;
+}
+
+.tabs-industry .tabs-industry-panel p:last-child a {
+  font-weight: 600;
+  color: var(--link-color);
+}
+
+.tabs-industry .tabs-industry-panel p:last-child a:hover {
+  color: var(--accent-color);
+}
+
+@media (width >= 900px) {
+  .tabs-industry .tabs-industry-panel > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-l);
+  }
+
+  .tabs-industry .tabs-industry-panel > div > p:first-child {
+    flex: 0 0 50%;
+  }
+
+  .tabs-industry .tabs-industry-panel img {
+    max-width: 50%;
+  }
+}
