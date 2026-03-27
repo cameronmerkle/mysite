@@ -170,5 +170,17 @@ export default async function decorate(block) {
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+
+  // create second row: nav-bar with gray background (sections + tools)
+  const navBar = document.createElement('div');
+  navBar.className = 'nav-bar';
+  const navBarInner = document.createElement('div');
+  navBarInner.className = 'nav-bar-inner';
+  if (navSections) navBarInner.append(navSections);
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) navBarInner.append(navTools);
+  navBar.append(navBarInner);
+  navWrapper.append(navBar);
+
   block.append(navWrapper);
 }

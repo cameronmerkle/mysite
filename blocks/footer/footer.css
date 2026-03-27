@@ -1,19 +1,18 @@
 /* stylelint-disable no-descending-specificity -- footer sections target different regions */
 
 footer {
-  background-color: #1b3a4b;
-  color: #c8d8e0;
-  font-size: var(--body-font-size-xs);
+  background-color: #0f3133;
+  color: #fff;
+  font-size: var(--body-font-size-s);
 }
 
 footer a:any-link {
-  color: #c8d8e0;
-  text-decoration: none;
+  color: #fff;
+  text-decoration: underline;
 }
 
 footer a:hover {
-  text-decoration: underline;
-  color: #fff;
+  color: #5ebcb3;
 }
 
 footer .footer > div {
@@ -35,9 +34,9 @@ footer .footer .section:first-child .default-content-wrapper {
 
 /* logo */
 footer .footer .section:first-child img {
-  width: 180px;
+  width: 200px;
   height: auto;
-  margin-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-l);
 }
 
 /* link lists */
@@ -51,10 +50,15 @@ footer .footer ul li {
   padding: 4px 0;
 }
 
+footer .footer ul li a {
+  font-size: var(--body-font-size-s);
+  line-height: 1.8;
+}
+
 /* column headers */
 footer .footer strong {
   color: #5ebcb3;
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-s);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -64,28 +68,29 @@ footer .footer strong {
 
 /* disclaimer section */
 footer .footer .section:nth-child(2) {
-  border-top: 1px solid #2d5a6b;
-  padding-top: var(--spacing-l);
-  font-weight: 600;
+  border-top: 1px solid #24767b;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-l);
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
 }
 
 /* bottom bar */
 footer .footer .section:last-child {
-  background-color: #152e3b;
-  border-top: 1px solid #2d5a6b;
+  background-color: #24767b;
   text-align: center;
-  font-size: 11px;
-  padding-top: var(--spacing-m);
-  padding-bottom: var(--spacing-m);
+  font-size: 15px;
+  padding-top: var(--spacing-l);
+  padding-bottom: var(--spacing-l);
 }
 
 footer .footer .section:last-child a {
-  font-size: 11px;
+  font-size: 15px;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 48px 32px 32px;
   }
 
   footer .footer .section:first-child .default-content-wrapper {
