@@ -1,6 +1,19 @@
+/* stylelint-disable no-descending-specificity -- footer sections target different regions */
+
 footer {
-  background-color: var(--light-color);
+  background-color: #1b3a4b;
+  color: #c8d8e0;
   font-size: var(--body-font-size-xs);
+}
+
+footer a:any-link {
+  color: #c8d8e0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 footer .footer > div {
@@ -13,8 +26,121 @@ footer .footer p {
   margin: 0;
 }
 
+/* main footer section – logo, quick links, columns */
+footer .footer .section:first-child .default-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-l);
+}
+
+/* logo */
+footer .footer .section:first-child img {
+  width: 180px;
+  height: auto;
+  margin-bottom: var(--spacing-m);
+}
+
+/* link lists */
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer ul li {
+  padding: 4px 0;
+}
+
+/* column headers */
+footer .footer strong {
+  color: #5ebcb3;
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--spacing-s);
+}
+
+/* disclaimer section */
+footer .footer .section:nth-child(2) {
+  border-top: 1px solid #2d5a6b;
+  padding-top: var(--spacing-l);
+  font-weight: 600;
+}
+
+/* bottom bar */
+footer .footer .section:last-child {
+  background-color: #152e3b;
+  border-top: 1px solid #2d5a6b;
+  text-align: center;
+  font-size: 11px;
+  padding-top: var(--spacing-m);
+  padding-bottom: var(--spacing-m);
+}
+
+footer .footer .section:last-child a {
+  font-size: 11px;
+}
+
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+
+  footer .footer .section:first-child .default-content-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 0 var(--spacing-xl);
+    align-items: start;
+  }
+
+  /* logo spans full width */
+  footer .footer .section:first-child .default-content-wrapper > p:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: var(--spacing-l);
+  }
+
+  /* quick links – column 1, span rows 2–3 */
+  footer .footer .section:first-child .default-content-wrapper > ul:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  /* company links – column 2, span rows 2–3 */
+  footer .footer .section:first-child .default-content-wrapper > ul:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 2 / 4;
+  }
+
+  /* WHY LUMEN heading – column 3, row 2 */
+  footer .footer .section:first-child .default-content-wrapper > p:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  /* WHY LUMEN list – column 3, row 3 */
+  footer .footer .section:first-child .default-content-wrapper > ul:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  /* RESOURCES heading – column 4, row 2 */
+  footer .footer .section:first-child .default-content-wrapper > p:nth-of-type(3) {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  /* RESOURCES list – column 4, row 3 */
+  footer .footer .section:first-child .default-content-wrapper > ul:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  footer .footer .section:last-child {
+    max-width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
